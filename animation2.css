@@ -1,0 +1,31 @@
+.gear {
+    width: 100%;
+    height: auto;
+    animation: rotateGear 60s linear infinite;
+    z-index: -1;
+}
+
+.gear:hover {
+    animation-duration: 3s;
+}
+
+@keyframes rotateGear {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.projects {
+    opacity: 0;
+    transform: translateY(50px); /* Moves the section downward initially */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: opacity, transform; /* For smoother animations */
+}
+
+.projects.visible {
+    opacity: 1;
+    transform: translateY(0); /* Brings the section back into its original position */
+}

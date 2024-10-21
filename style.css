@@ -1,15 +1,152 @@
+/* General Body Styling */
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f0f0f0;
+    color: #333333;
+    line-height: 1.6;
 }
 
-h1 {
-    color: #333;
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #333333;
+    font-size: 2em;
 }
 
 p {
-    color: #666;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+
+a:hover {
+    color: #ff00ff;
+}
+
+
+a:visited {
+    color: #00ff00;
+}
+
+
+a:active {
+    color: #ff0000;
+}
+
+.gear-container {
+    width: 10%;
+    height: 10%;
+    position: absolute;
+    top: 112%;
+    left: 21%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: 0.2;
+}
+
+section {
+    display: flex;
+    padding: 20px 100px;
+    width: 60%;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 50px;
+    box-shadow: 0 0 40px #4682b4;
+    font-family: 'Roboto';
+    background-color: #f0f0f0;
+    z-index: 1;
+    margin-bottom: 20%;
+}
+
+
+
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 80px;
+    background-color: rgb(5, 5, 5);
+    transition: all 0.5s ease;
+    padding: 0.5rem 0.5rem;
+}
+
+.menu.active ~ .main {
+    left: 200px;
+    width: calc(100% - 200px);
+}
+
+.no-dots {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.text p {
+    color: #000000;
+}
+
+.main {
+    margin: 5%;
+    margin-top: 10%;
+    /* linear-gradient(to right, rgba(255, 85, 0, 0.3), #0d0d0d 50%); */
+
+}
+
+.aboutme {
+    flex-direction: column; 
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutme h2 {
+    opacity: 0;
+    animation: emerge 2s forwards;
+    animation-delay: 1s;
+    font-size: 4em;
+}
+
+.aboutme h1 {
+    opacity: 0;
+    animation: emerge 2s forwards;
+    animation-delay: 3s;
+    font-size: 2em;
+}
+
+@keyframes emerge {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.projects {
+    text-align: left;
+}
+
+.projects h2 {
+    font-size: 3em;
+}
+
+.projects h1 {
+    font-size: 2em;
 }
