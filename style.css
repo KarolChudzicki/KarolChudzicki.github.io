@@ -4,7 +4,7 @@ body {
     padding: 0;
     background-color: #f0f0f0;
     color: #333333;
-    line-height: 1.6;
+    /* line-height: 1.6; */
 }
 
 html {
@@ -13,10 +13,15 @@ html {
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 1.5em;
     margin-bottom: 10px;
     color: #333333;
-    font-size: 2em;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: #333333;
 }
 
 p {
@@ -45,60 +50,32 @@ a:active {
 }
 
 .gear-container {
-    width: 10%;
-    height: 10%;
+    width: 15%;
+    aspect-ratio: 1;
     position: absolute;
-    top: 112%;
-    left: 21%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
     opacity: 0.2;
+    top: -6vh;
+    left: -4vw;
 }
+
+
 
 section {
-    display: flex;
-    padding: 20px 100px;
     width: 60%;
-    margin: 0 auto;
-    padding: 40px;
-    border-radius: 50px;
-    box-shadow: 0 0 40px #4682b4;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10vh;
+    border-radius: 8vh;
+    box-shadow: 0 1rem 5rem #4682b4;
     font-family: 'Roboto';
     background-color: #f0f0f0;
-    z-index: 1;
     margin-bottom: 20%;
+    font-size: 2vh;
+    position: relative;
+    z-index: 1;
 }
 
 
-
-
-.menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 80px;
-    background-color: rgb(5, 5, 5);
-    transition: all 0.5s ease;
-    padding: 0.5rem 0.5rem;
-}
-
-.menu.active ~ .main {
-    left: 200px;
-    width: calc(100% - 200px);
-}
-
-.no-dots {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-
-
-.text p {
-    color: #000000;
-}
 
 .main {
     margin: 5%;
@@ -117,15 +94,13 @@ section {
 .aboutme h2 {
     opacity: 0;
     animation: emerge 2s forwards;
-    animation-delay: 1s;
-    font-size: 4em;
+    animation-delay: 2.5s;
 }
 
 .aboutme h1 {
     opacity: 0;
     animation: emerge 2s forwards;
-    animation-delay: 3s;
-    font-size: 2em;
+    animation-delay: 1s;
 }
 
 @keyframes emerge {
@@ -139,14 +114,31 @@ section {
     }
 }
 
+.education {
+    transform: translateX(100px);
+    opacity: 0;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.education.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+
 .projects {
-    text-align: left;
+    transform: translateX(100px);
+    opacity: 0;
+    transition: 0.5s;
+    z-index: 1;
 }
 
-.projects h2 {
-    font-size: 3em;
+
+
+
+.projects.show {
+    transform: translateX(0);
+    opacity: 1;
 }
 
-.projects h1 {
-    font-size: 2em;
-}

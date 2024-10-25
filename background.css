@@ -1,0 +1,60 @@
+.floating {
+    aspect-ratio: 1;
+    position: absolute;
+    top: var(--top-position);
+    left: var(--left);
+    right: var(--right);
+    animation-delay: var(--animation-delay);
+    background-size: contain;
+    background-position: center;
+    animation: pulse_no_gradient 10s infinite linear;
+    opacity: var(--opacity);
+}
+
+.gearing {
+    aspect-ratio: 1;
+    position: absolute;
+    top: var(--top-position);
+    left: var(--left);
+    right: var(--right);
+    animation-delay: var(--animation-delay);
+    background-size: contain;
+    background-position: center;
+    animation: rotateGearwithPulse 30s linear infinite;
+    opacity: var(--opacity);
+}
+
+.gear { background-image: url('Images/gear.svg'); }
+.board { background-image: url('Images/board.svg'); }
+.arm { background-image: url('Images/arm.svg'); }
+.ai { background-image: url('Images/ai.svg'); }
+
+.large { width: 13%; }
+.medium { width: 11%; }
+.small { width: 9%; }
+.xsmall { width: 7%; }
+
+@keyframes rotateGearwithPulse {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse_no_gradient {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(15px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
