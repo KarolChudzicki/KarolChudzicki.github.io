@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_gallery.css">   
     <link rel="stylesheet" href="background.css">
     <link rel="stylesheet" href="animation2.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
@@ -24,14 +25,14 @@
         <!-- Introduction -->
         
         <section class="aboutme" id="aboutme">
-            <div class="text">
+            <div class="content">
                 <h1><strong>Hi! I'm Karol Chudzicki</strong></h1>
-                <h2>Automation and Electronics Engineer with a keen Passion for Technology. I've a strong background in robotics, automation and electronics. I've worked on many projects ranging from image processing to designing robotic arm.</h2>
+                <h2>Automation and Electronics Engineer with a passion for technology, experienced in robotics, automation, and electronics. I've completed projects from image processing to robotic arm design.</h2>
             </div>
         </section>
 
         <section class="education" id="education">
-            <div class="text">
+            <div class="content">
                 <h1>Education</h1>
                 <div class="school">
                     <h2>Automation and Robotics - Technical University of Gdańsk</h2>
@@ -46,30 +47,52 @@
                     <h2>Electrical Engineering - Technical University of Denmark</h2>
                     <p><strong>Expected graduation:</strong> [June, 2025]</p>
                     <p>Skills gained:</p>
-                    <li>Circuit design and analysis</li>
-                    <li>PCB design</li>
-                    <li>STM32 programming in C</li>
-                    <li>Image processing in Python</li>
-                    <li>Universal Robots programming</li>
-                    <li>Completed a semester working at a startup, where I gained hands-on experience with deadline-driven projects.</li>
+                    <ul>
+                        <li>Circuit design and analysis</li>
+                        <li>PCB design</li>
+                        <li>STM32 programming in C</li>
+                        <li>Image processing in Python</li>
+                        <li>Universal Robots programming</li>
+                        <li>Completed a semester working at a startup, where I gained hands-on experience with deadline-driven projects.</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
         <!-- Projects -->
         <section class="projects" id="projects">
-            <div class="text">
+            <div class="content">
                 <h1>Projects</h1>
                 <p>Here are some of the key projects I’ve worked on, robotics systems, microcontroller programming, and more.</p>
                 <div class="project">
-                    <h2><strong>6-axis robotic arm</strong></h2>
-                    <p>In 2023 I've completed my bachelor in Automation and Robotics at University of Technology in Gdańsk. And for my
-                    bachelor thesis I've designed, constructed and programmed robotic arm with six degrees of freedom.</p>
-                    <img src="Images/" alt="Skills graphic">
+                    <div class="details">
+                        <h2><strong>6-axis robotic arm</strong></h2>
+                        <p>In 2023 I've completed my bachelor in Automation and Robotics at University of Technology in Gdańsk. And for my
+                        bachelor thesis I've designed, constructed and programmed robotic arm with six degrees of freedom.</p>
+                    </div>
+                    <div class="image-gallery"><img src="Images/roboArm_transparent.png" alt="ArmRender" id="main_image_arm"></div>
+                </div>
+                <div class="project">
+                    <div class="details">
+                        <h2><strong>CNC machine</strong></h2>
+                        <p>One of my first projects and most rewarding projects was designing and constructing my own CNC machine back in 2019.
+                        This project not only introduced me to CAD design, but also became an irrepraceable tool for building other projects.
+                        It's still fully operational to this day, although it needs some upgrades to enhance it's precision and performance.
+                        </p>
+                    </div>
+                    <div class="image-gallery"><img src="Images/cnc_transparent.png" alt="CNCRender" id="main_image_cnc"></div>
                 </div>
             </div>
         </section>
-        
+
+        <div class="gallery" id="gallery">
+            <span class="close">&times;</span>
+            <div class="gallery_images">
+                <span class="prev_button">&#10094;</span>
+                <img src="" alt="ImageGallery" id="gallery_image">
+                <span class="next_button">&#10095;</span>
+            </div>
+        </div>
 
         <!-- Skills -->
         <section class="skills" id="skills">
@@ -77,13 +100,10 @@
                 <h2>Skills</h2>
                 <p>My technical skills include Python, C++, OpenCV, Matlab, CAD design in fusion 360, blablabla.</p>
             </div>
-            <!-- <div class="graphic">
-                <img src="your-image3.jpg" alt="Skills graphic">
-            </div> -->
         </section>
 
         <!-- Experience -->
-        <section class="experience">
+        <section class="experience" id="experience">
             <!-- <div class="graphic">
                 <img src="your-image4.jpg" alt="Experience graphic">
             </div> -->
@@ -94,7 +114,7 @@
         </section>
 
         <!-- Contact -->
-        <section class="contact">
+        <section class="contact" id="contact">
             <div class="text">
                 <h2>Contact</h2>
                 <p>Feel free to reach out via email or find me on GitHub for collaboration opportunities.</p>
@@ -105,21 +125,25 @@
         </section>
 
         <div class="floating board large" style="--right:10vw; --top-position: 10vh; --opacity: 0.15;"></div>
-        <div class="floating ai small" style="--left:5vw; --top-position: 10vh; --opacity: 0.08;"></div>
-        <div class="floating board xsmall" style="--left:40vw; --top-position: 75vh; --opacity: 0.1;"></div>
-        <div class="floating arm medium" style="--left:10vw; --top-position: 50vh; --opacity: 0.1;"></div>
-        <div class="floating arm small" style="--right:5vw; --top-position: 80vh; --opacity: 0.08;"></div>
+        <div class="floating print3d small" style="--left:5vw; --top-position: 10vh; --opacity: 0.08;"></div>
+        <div class="floating multimeter xsmall" style="--left:40vw; --top-position: 75vh; --opacity: 0.1;"></div>
+        <div class="floating arm medium" style="--left:5vw; --top-position: 50vh; --opacity: 0.1;"></div>
+        <div class="floating arm small" style="--right:15vw; --top-position: 80vh; --opacity: 0.08;"></div>
         <div class="floating ai xsmall" style="--left:45vw; --top-position: 10vh; --opacity: 0.1;"></div>
 
-        <!-- <div class="floating arm large" style="--right:10vw; --top-position: 110vh; --opacity: 0.15;"></div>
-        <div class="floating arm medium" style="--left:10vw; --top-position: 120vh; --opacity: 0.1;"></div>
-        <div class="floating arm small" style="--right:40vw; --top-position: 150vh; --opacity: 0.08;"></div>
-        <div class="floating arm xsmall" style="--left:30vw; --top-position: 5vh; --opacity: 0.1;"></div> -->
+        <div class="floating print3d large" style="--right:3vw; --top-position: 230vh; --opacity: 0.15;"></div>
+        <div class="floating ai small" style="--right:5vw; --top-position: 130vh; --opacity: 0.08;"></div>
+        <div class="floating board xsmall" style="--right:50vw; --top-position: 200vh; --opacity: 0.1;"></div>
+        <div class="floating ai medium" style="--left:5vw; --top-position: 110vh; --opacity: 0.1;"></div>
+        <div class="floating arm small" style="--right:5vw; --top-position: 180vh; --opacity: 0.08;"></div>
+        <div class="floating multimeter medium" style="--left:10vw; --top-position: 190vh; --opacity: 0.1;"></div>
 
-        <!-- <div class="gearing gear large" style="--right:10vw; --top-position: 30vh; --opacity: 0.15;"></div>
-        <div class="gearing gear medium" style="--left:10vw; --top-position: 55vh; --opacity: 0.1;"></div>
-        <div class="gearing gear small" style="--right:40vw; --top-position: 85vh; --opacity: 0.08;"></div>
-        <div class="gearing gear xsmall" style="--left:30vw; --top-position: 115vh; --opacity: 0.1;"></div> -->
+        <div class="floating print3d medium" style="--right:50vw; --top-position: 300vh; --opacity: 0.15;"></div>
+        <div class="floating ai small" style="--right:10vw; --top-position: 400vh; --opacity: 0.08;"></div>
+        <div class="floating board small" style="--right:30vw; --top-position: 500vh; --opacity: 0.1;"></div>
+        <div class="floating ai medium" style="--left:5vw; --top-position: 280vh; --opacity: 0.1;"></div>
+        <div class="floating arm small" style="--right:5vw; --top-position: 350vh; --opacity: 0.08;"></div>
+        <div class="floating multimeter medium" style="--left:15vw; --top-position: 340vh; --opacity: 0.1;"></div>
 
         
     </div>

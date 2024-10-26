@@ -28,11 +28,13 @@
 .board { background-image: url('Images/board.svg'); }
 .arm { background-image: url('Images/arm.svg'); }
 .ai { background-image: url('Images/ai.svg'); }
+.print3d { background-image: url('Images/3dprint.svg'); }
+.multimeter { background-image: url('Images/multimeter.svg'); }
 
-.large { width: 13%; }
-.medium { width: 11%; }
-.small { width: 9%; }
-.xsmall { width: 7%; }
+.large { width: 25vh; }
+.medium { width: 22vh; }
+.small { width: 17vh; }
+.xsmall { width: 12vh; }
 
 @keyframes rotateGearwithPulse {
     0% {
@@ -51,7 +53,7 @@
         transform: translateY(0px);
     }
     50% {
-        transform: translateY(15px);
+        transform: translateY(30px);
     }
     100% {
         transform: translateY(0px);
