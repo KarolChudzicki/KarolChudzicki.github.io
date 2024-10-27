@@ -13,7 +13,7 @@ section {
     border-radius: 8vh;
     font-family: 'Roboto';
     background-color: #f0f0f0;
-    margin-bottom: 25%;
+    margin-bottom: 20%;
     margin-top: 15%;
     position: relative;
     z-index: 1;
@@ -159,6 +159,12 @@ p {
     margin-bottom: 20px;
 }
 
+.clickEncouragement {
+    color: #202020; /* Use a color that stands out */
+    font-style: italic;
+    font-size: 1em;
+}
+
 .skills {
     transform: translateX(100px);
     opacity: 0;
@@ -166,10 +172,27 @@ p {
     z-index: 1;
 }
 
+.skills ul li:hover {
+    background-color: #eaeaea;
+    box-shadow: 0rem 0rem 3rem #ffffff73;
+}
 
 .skills.show {
     transform: translateX(0);
     opacity: 1;
+}
+
+.icon {
+    height: 5vh;
+    aspect-ratio: 1;
+    padding-right: 2%;
+}
+
+.skills li {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1vh;
 }
 
 .experience {
