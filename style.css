@@ -13,10 +13,10 @@ section {
     border-radius: 8vh;
     font-family: 'Roboto';
     background-color: #f0f0f0;
-    margin-bottom: 20%;
-    margin-top: 15%;
     position: relative;
     z-index: 1;
+    margin-bottom: 5%;
+    margin-top: 5%;
 }
 
 /* Big screens */
@@ -60,6 +60,8 @@ h2 {
     margin-bottom: 20px;
     color: #333333;
     margin: 15px;
+    display: flex;
+    align-items: center;
 }
 
 h1 {
@@ -95,6 +97,8 @@ p {
     text-align: left;
     align-items: center;
     justify-content: center;
+    margin-bottom: 20%;
+    margin-top: 15%;
 }
 
 .aboutme h2 {
@@ -130,6 +134,12 @@ p {
 .education.show {
     transform: translateX(0);
     opacity: 1;
+}
+
+.education .icon {
+    height: 10vh;
+    aspect-ratio: 1;
+    padding-left: 2%;
 }
 
 .school {
@@ -219,4 +229,23 @@ p {
 .contact.show {
     transform: translateX(0);
     opacity: 1;
+}
+
+.contact li {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1vh;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.contact a {
+    text-decoration: none; /* Remove underline */
+    color: #00254d; /* Bootstrap primary color for links */
+    transition: color 0.3s, transform 0.3s; /* Smooth color and transform transition */
+}
+
+.contact li:hover {
+    color: #004c9d; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarge the link on hover */
 }
