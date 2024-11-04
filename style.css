@@ -19,13 +19,21 @@ section {
     margin-top: 5%;
 }
 
+ul {
+    font-size: 1em;
+}
+
+li {
+    font-size: larger;
+}
+
 /* Big screens */
 @media (min-width: 768px) {
     section {
-        width: 65%;
+        width: 55%;
         padding: 5%;
         box-shadow: 0 1rem 5rem #4682b4;
-        font-size: 1vw;
+        font-size: 1.2em;
     }
 }
 
@@ -153,6 +161,8 @@ p {
     opacity: 0;
     transition: 0.5s;
     z-index: 1;
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
 
 .projects.show {
@@ -164,8 +174,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2%;
-    margin: 10px;
+    
     margin-bottom: 20px;
 }
 
@@ -174,6 +183,10 @@ p {
     font-style: italic;
     font-size: 1em;
 }
+
+.experiences {
+    margin-top: 5%;
+} 
 
 .skills {
     transform: translateX(100px);
@@ -193,7 +206,7 @@ p {
 }
 
 .icon {
-    height: 5vh;
+    height: 2em;
     aspect-ratio: 1;
     padding-right: 2%;
 }

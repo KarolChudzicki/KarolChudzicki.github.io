@@ -31,10 +31,10 @@
 .print3d { background-image: url('Images/3dprint.svg'); }
 .multimeter { background-image: url('Images/multimeter.svg'); }
 
-.large { width: 25vh; }
-.medium { width: 22vh; }
-.small { width: 17vh; }
-.xsmall { width: 12vh; }
+.large { width: 18vh; }
+.medium { width: 16vh; }
+.small { width: 15vh; }
+.xsmall { width: 10vh; }
 
 @keyframes rotateGearwithPulse {
     0% {
