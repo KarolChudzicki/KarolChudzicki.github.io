@@ -120,6 +120,9 @@ const galleryImages = {
   1: [
     'Images/cnc.PNG',
     'Images/cnc_pic.jpg'
+  ],
+  2: [
+    'Images/led_cube_gray.PNG'
   ]
 };
 
@@ -143,6 +146,12 @@ main_image_arm.addEventListener('click', () => {
 main_image_cnc.addEventListener('click', () => {
   gallery_image.src = galleryImages[1][0];
   galleryIndex = 1;
+  openGallery()
+});
+
+main_image_cube.addEventListener('click', () => {
+  gallery_image.src = galleryImages[2][0];
+  galleryIndex = 2;
   openGallery()
 });
 
