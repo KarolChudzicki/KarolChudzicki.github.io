@@ -165,6 +165,7 @@ p {
     margin-bottom: 1%;
 }
 
+
 .projects.show {
     transform: translateX(0);
     opacity: 1;
@@ -174,8 +175,26 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    
     margin-bottom: 20px;
+}
+
+.github-link {
+    margin-left: 2%;
+    display:inline-flex;
+    align-items: center;
+    margin-bottom: 1vh;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.github-link a {
+    text-decoration: none;
+    color: #00254d;
+    padding: 10px;
+}
+
+.github-link:hover {
+    color: #004c9d;
+    transform: scale(1.1);
 }
 
 .clickEncouragement {
@@ -253,12 +272,12 @@ p {
 }
 
 .contact a {
-    text-decoration: none; /* Remove underline */
-    color: #00254d; /* Bootstrap primary color for links */
-    transition: color 0.3s, transform 0.3s; /* Smooth color and transform transition */
+    text-decoration: none;
+    color: #00254d;
+    transition: color 0.3s, transform 0.3s;
 }
 
 .contact li:hover {
-    color: #004c9d; /* Darker blue on hover */
-    transform: scale(1.05); /* Slightly enlarge the link on hover */
+    color: #004c9d;
+    transform: scale(1.05);
 }

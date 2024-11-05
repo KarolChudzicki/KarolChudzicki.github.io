@@ -111,13 +111,15 @@ document.addEventListener("DOMContentLoaded", function() {
 const galleryImages = {
   0:[
     'Images/roboArm.PNG',
+    'Images/roboArm_real.jpg',
     'Images/teachpendant.png',
     'Images/robo_arm.jpg',
     'Images/Shaft.png',
     'Images/FlangeCoupling.png'
   ],
   1: [
-    'Images/cnc.PNG'
+    'Images/cnc.PNG',
+    'Images/cnc_pic.jpg'
   ]
 };
 
