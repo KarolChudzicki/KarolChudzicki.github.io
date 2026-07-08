@@ -250,6 +250,18 @@ p {
     opacity: 1;
 }
 
+.companylink a {
+    display: inline-block;
+    text-decoration: none;
+    color: #00254d;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.companylink a:hover {
+    color: #004c9d;
+    transform: scale(1.05);
+}
+
 .contact {
     transform: translateX(100px);
     opacity: 0;
