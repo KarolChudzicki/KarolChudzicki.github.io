@@ -6,7 +6,7 @@ const observer = new IntersectionObserver(entries => {
   console.log(entries)
 },
   {
-    threshold: 0.5,
+    threshold: 0.2,
     //rootMargin: "0px",
   } 
 )

@@ -111,13 +111,13 @@ p {
 
 .aboutme h2 {
     opacity: 0;
-    animation: emerge 2s forwards;
-    animation-delay: 2.5s;
+    animation: emerge 0.5s forwards;
+    animation-delay: 1.5s;
 }
 
 .aboutme h1 {
     opacity: 0;
-    animation: emerge 2s forwards;
+    animation: emerge 0.5s forwards;
     animation-delay: 1s;
 }
 
