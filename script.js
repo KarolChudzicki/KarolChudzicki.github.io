@@ -12,9 +12,8 @@ const observer = new IntersectionObserver(entries => {
 )
 
 observer.observe(projects)
-observer.observe(education)
-observer.observe(skills)
 observer.observe(experience)
+observer.observe(education)
 observer.observe(contact)
 
 const floating = document.querySelectorAll('.floating');
@@ -33,7 +32,7 @@ const observerFloating = new IntersectionObserver(entries => {
   });
 }, 
 {
-  threshold: 1 // Keep as is if you want the entire element visible before triggering
+  threshold: 0.5 // Keep as is if you want the entire element visible before triggering
 });
 
 // Add the scroll event listener only once
@@ -47,64 +46,6 @@ window.addEventListener('scroll', function() {
   });
 });
 
-// Observe all floating elements
-floating.forEach(elem => {
-  observerFloating.observe(elem);
-});
-
-
-
-// const observerFloating = new IntersectionObserver(entries => {
-//   entries.forEach(entry => {
-//       if (entry.isIntersecting) {
-//         window.addEventListener('scroll', function(){
-//           var value = window.scrollY;
-//           requestAnimationFrame(() => {
-//             //=========================================================
-//             floating[0].style.top = initialTop[0] + value * 0.4 + 'px';
-//             floating[1].style.top = initialTop[1] + value * 0.2 + 'px';
-//             floating[2].style.top = initialTop[2] + value * 0.4 + 'px';
-//             floating[3].style.top = initialTop[3] + value * 0.2 + 'px';
-//             floating[4].style.top = initialTop[4] + value * 0.3 + 'px';
-//             floating[5].style.top = initialTop[5] + value * 0.25 + 'px';
-//             //=========================================================
-//             floating[6].style.top = initialTop[6] + value * 0.4 + 'px';
-//             floating[7].style.top = initialTop[7] + value * 0.2 + 'px';
-//             floating[8].style.top = initialTop[8] + value * 0.3 + 'px';
-//             floating[9].style.top = initialTop[9] + value * 0.4 + 'px';
-//             floating[10].style.top = initialTop[10] + value * 0.2 + 'px';
-//             floating[11].style.top = initialTop[11] + value * 0.25 + 'px';
-//             //=========================================================
-//             floating[12].style.top = initialTop[12] + value * 0.1 + 'px';
-//             floating[13].style.top = initialTop[13] + value * 0.4 + 'px';
-//             floating[14].style.top = initialTop[14] + value * 0.2 + 'px';
-//             floating[15].style.top = initialTop[15] + value * 0.5 + 'px';
-//             floating[16].style.top = initialTop[16] + value * 0.3 + 'px';
-//             floating[17].style.top = initialTop[17] + value * 0.5 + 'px';
-//           });
-//         })
-//         observerFloating.unobserve(entry.target);
-//       }
-//     });
-// }, 
-// {
-//   threshold: 0.5
-// }
-// );
-
-// // Observe all floating elements
-// floating.forEach(element => {
-//   observerFloating.observe(element);
-// });
-
-document.addEventListener("DOMContentLoaded", function() {
-  const floatingElements = document.querySelectorAll(".floating");
-
-  floatingElements.forEach(element => {
-    const randomDelay = Math.random() * 3; // Generates a delay between 0 and 4 seconds
-    element.style.animationDelay = `${randomDelay}s`;
-  });
-});
 
 
 //=====================GALLERY========================
