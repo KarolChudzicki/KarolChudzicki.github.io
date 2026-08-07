@@ -4,22 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style_gallery.css">   
+    <link rel="stylesheet" href="Styles/style_general.css">
+    <link rel="stylesheet" href="Styles/style_gallery.css">
+    <link rel="stylesheet" href="Styles/style_menu.css">  
     <link rel="stylesheet" href="background.css">
     <link rel="stylesheet" href="animation2.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- <div class="menu">
-        <input type="checkbox">
-        <div class="toggle">MENU</div>
-        <ul class="no-dots">
-            <li><a href="#aboutme">About me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-        </ul>
-    </div> -->
+    <nav class="side-nav">
+        <a href="#aboutme"><span>01</span> About</a>
+        <a href="#projects"><span>02</span> Projects</a>
+        <a href="#experience"><span>03</span> Experience</a>
+        <a href="#education"><span>04</span> Education</a>
+        <a href="#contact"><span>05</span> Contact</a>
+    </nav>
 
     <div class="main">
         <!-- Introduction -->
@@ -44,10 +43,16 @@
                             This project was part of my master thesis. I designed a program that controlled the robotic arm using the input
                             from the camera mounted near its gripper to catch moving parts from a conveyor belt and sort them.
                         </p>
-                        <p><strong>Engineering challenge:</strong> Tuning the control system to reliably catch moving parts from the conveyor.</p>
-                        <ul>
-                            <li>Python, OpenCV, TCP/IP, Universal Robots, 3D printing, Control Theory, PID</li>
-                        </ul> 
+                        <p class="challenge"><strong>Engineering challenge:</strong> Tuning the control system to reliably catch moving parts from the conveyor.</p>
+                        <div class="skills-gained">
+                            <span>Python</span>
+                            <span>OpenCV</span>
+                            <span>TCP/IP</span>
+                            <span>Universal Robots</span>
+                            <span>3D printing</span>
+                            <span>Control theory</span>
+                            <span>PID</span>
+                        </div> 
                         <p class="clickEncouragement">Click on the picture for more details.</p>
                         <div class="github-link">
                             <img src="Images/github.svg" alt="" class="icon"> <a href="https://github.com/KarolChudzicki/Master-Thesis" target="_blank"><strong>Repository</strong></a>
@@ -63,7 +68,7 @@
                         <ul>
                             <li>C++, Arduino, Fusion 360, CNC Machining</li>
                         </ul>
-                        <p><strong>Engineering challenge:</strong> Designing a rigid robotic structure and backlash reduction. Developing the inverse kinematics was another key challenge.</p>
+                        <p class="challenge"><strong>Engineering challenge:</strong> Designing a rigid robotic structure and backlash reduction. Developing the inverse kinematics was another key challenge.</p>
                         <p class="clickEncouragement">Click on the picture for more details.</p>
                         <div class="github-link">
                             <img src="Images/github.svg" alt="" class="icon"> <a href="https://github.com/KarolChudzicki/bachelor_thesis" target="_blank"><strong>Repository</strong></a>
@@ -81,7 +86,7 @@
                         <p>
                             I have build a 3.5" FPV freestyle drone from components that I chose myself. This project involved hardware, soldiering and flight controller configuration. It also required designing some of the parts and printing them on a bambu lab 3D printer.
                         </p>
-                        <p><strong>Engineering challenge:</strong> Eliminating vibrations during flight and improving video transmission range and stability.</p>
+                        <p class="challenge"><strong>Engineering challenge:</strong> Eliminating vibrations during flight and improving video transmission range and stability.</p>
                         <ul>
                             <li>3D printing, Control theory, PID, Soldering, Small electronics</li>
                         </ul>
@@ -96,7 +101,7 @@
                         <p>
                             I have build a 8x8x8 cube with individually addressable LEDs. The project involved designing the structure and soldering over 2000 connections and developing software to generate animations.
                         </p>
-                        <p><strong>Engineering challenge:</strong> Making good quality soldering joints to prevent breaking and snapping.</p>
+                        <p class="challenge"><strong>Engineering challenge:</strong> Making good quality soldering joints to prevent breaking and snapping.</p>
                         <ul>
                             <li>C++, ESP32, ESP32, Addressable LEDs, Power distribution</li>
                         </ul>
@@ -111,7 +116,7 @@
                         <p>
                             This is my first big project and mosted used for manufacturing parts for my later ideas.
                         </p>
-                        <p><strong>Engineering challenge:</strong> Learning CNC machining from scratch and designing a machine accurate enough to manufacture parts for future projects.</p>
+                        <p class="challenge"><strong>Engineering challenge:</strong> Learning CNC machining from scratch and designing a machine accurate enough to manufacture parts for future projects.</p>
                         <ul>
                             <li>Fusion 360, CNC path planning, CNC Machinning</li>
                         </ul>
@@ -215,30 +220,34 @@
 
 
         <!-- Contact -->
-        <section class="contact" id="contact">
-            <div class="text">
-                <h1>Contact Me</h1>
-                <p>If you have any questions or would like to discuss potential collaborations, feel free to reach out!</p>
-                <ul>
-                    <li>
-                        <img src="Images/email.svg" alt="" class="icon"> <a href="mailto:chudzicki.karol@gmail.com">chudzicki.karol@gmail.com</a>
-                    </li>
-                    <li>
-                        <img src="Images/linkedin.svg" alt="" class="icon"> <a href="https://www.linkedin.com/in/karol-chudzicki-194030162/" target="_blank">linkedin.com/in/karol-chudzicki</a>
-                    </li>
-                    <li>
-                        <img src="Images/ig.svg" alt="" class="icon"> <a href="https://www.instagram.com/engineering.in.my.basement/" target="_blank">@engineering.in.my.basement</a>
-                    </li>
-                    <li>
-                        <img src="Images/github.svg" alt="" class="icon"> <a href="https://github.com/KarolChudzicki" target="_blank">github.com/KarolChudzicki</a>
-                    </li>
-                </ul>
-            </div>
-        </section>
+        <div class="contact-wrapper">
+            <section class="contact" id="contact">
+                <div class="text">
+                    <h1>Contact Me</h1>
+                    <p>If you have any questions or would like to discuss potential collaborations, feel free to reach out!</p>
+                    <ul>
+                        <li>
+                            <img src="Images/email.svg" alt="" class="icon"> <a href="mailto:chudzicki.karol@gmail.com">chudzicki.karol@gmail.com</a>
+                        </li>
+                        <li>
+                            <img src="Images/linkedin.svg" alt="" class="icon"> <a href="https://www.linkedin.com/in/karol-chudzicki-194030162/" target="_blank">linkedin.com/in/karol-chudzicki</a>
+                        </li>
+                        <li>
+                            <img src="Images/ig.svg" alt="" class="icon"> <a href="https://www.instagram.com/engineering.in.my.basement/" target="_blank">@engineering.in.my.basement</a>
+                        </li>
+                        <li>
+                            <img src="Images/github.svg" alt="" class="icon"> <a href="https://github.com/KarolChudzicki" target="_blank">github.com/KarolChudzicki</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        
     
     </div>
 
     <script src="script.js"></script>
+    <script src="menu.js"></script>
 
 </body>
 </html>
