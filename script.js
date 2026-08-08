@@ -5,6 +5,11 @@ const experience = document.getElementById("experience");
 const education = document.getElementById("education");
 const contact = document.getElementById("contact");
 
+const triggerOffset = Math.min(
+    400,
+    Math.max(60, window.innerHeight * 0.3)
+);
+
 const observer = new IntersectionObserver(
     (entries) => {
         entries.forEach(entry => {
@@ -15,7 +20,8 @@ const observer = new IntersectionObserver(
         });
     },
     {
-        threshold: 0.2
+        threshold: 0,
+        rootMargin: `0px 0px -${triggerOffset}px 0px`
     }
 );
 

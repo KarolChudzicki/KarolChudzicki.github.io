@@ -14,11 +14,30 @@
 </head>
 <body>
     <nav class="side-nav">
-        <a href="#aboutme"><span>01</span> About</a>
-        <a href="#projects"><span>02</span> Projects</a>
-        <a href="#experience"><span>03</span> Experience</a>
-        <a href="#education"><span>04</span> Education</a>
-        <a href="#contact"><span>05</span> Contact</a>
+        <a href="#aboutme">
+            <span class="nav-number">01</span>
+            <span class="nav-text">About</span>
+        </a>
+
+        <a href="#projects">
+            <span class="nav-number">02</span>
+            <span class="nav-text">Projects</span>
+        </a>
+
+        <a href="#experience">
+            <span class="nav-number">03</span>
+            <span class="nav-text">Experience</span>
+        </a>
+
+        <a href="#education">
+            <span class="nav-number">04</span>
+            <span class="nav-text">Education</span>
+        </a>
+
+        <a href="#contact">
+            <span class="nav-number">05</span>
+            <span class="nav-text">Contact</span>
+        </a>
     </nav>
 
     <div class="main">
@@ -164,16 +183,22 @@
         <section class="experience" id="experience">
             <div class="text">
                 <h1>Experience</h1>
+
                 <div class="experiences">
-                    <h2>Junior project engineer - Marine department</h2>
-                    <p><strong>MPL Techma</strong> [April 2023 - June 2023]</p>
+                    <h2>Robot programmer</h2>
+                    <p><strong>TECHVOLVER</strong> [December 2024 - now]</p>
+                    <p class="companylink"><a href="https://techvolver.com/" target="_blank">www.techvolver.com</a></p>
                     <ul>
-                        <li>Assisted the Senior Project Engineer in developing a PLC program for the HMI system on a ship.</li>
-                        <li>Independently designed a SCADA system in ICONICS from scratch during the second half of the internship.</li>
-                        <li>The SCADA system provided the crew with critical sensor data such as: tank ballast level, engine status and more.</li>
-                        <li>Implemented a user management system that controlled data visibility based on user permissions.</li>
-                    </ul> 
+                        <li>Techvolver is a startup developing automatic pipette calibration systems for laboratories using robotic arms.</li>
+                        <li>I was hired to be responsible for robotic arms programming and other hardware .</li>
+                        <li>My work with Universal Robots, developing programs and integrating them with other modules with Arduino or Computer vision (FESTO Cameras)</li>
+                        <li>I developed mostly in UR Script, Polyscope, and python. I frequently used python to control the robot via computer to test individual programs. When the whole system was running it was controlled by UIPath which was not a part of my responisbility.
+                        </li>
+                        As a part of my job I also developed URCap for handling communication between end effector device such as pipette holder which had a microcontroller which had to communicate with the process PC without using external cable.
+                        I also gained experience with handling issues through Universal robots support platform.
+                    </ul>
                 </div>
+                
                 <div class="experiences">
                     <h2>Student assistant</h2>
                     <p><strong>PARAL</strong> [November 2023 - May 2024]</p>
@@ -192,18 +217,14 @@
                 </div>
 
                 <div class="experiences">
-                    <h2>Robot programmer</h2>
-                    <p><strong>TECHVOLVER</strong> [December 2024 - now]</p>
-                    <p class="companylink"><a href="https://techvolver.com/" target="_blank">www.techvolver.com</a></p>
+                    <h2>Junior project engineer - Marine department</h2>
+                    <p><strong>MPL Techma</strong> [April 2023 - June 2023]</p>
                     <ul>
-                        <li>Techvolver is a startup developing automatic pipette calibration systems for laboratories using robotic arms.</li>
-                        <li>I was hired to be responsible for robotic arms programming and other hardware .</li>
-                        <li>My work with Universal Robots, developing programs and integrating them with other modules with Arduino or Computer vision (FESTO Cameras)</li>
-                        <li>I developed mostly in UR Script, Polyscope, and python. I frequently used python to control the robot via computer to test individual programs. When the whole system was running it was controlled by UIPath which was not a part of my responisbility.
-                        </li>
-                        As a part of my job I also developed URCap for handling communication between end effector device such as pipette holder which had a microcontroller which had to communicate with the process PC without using external cable.
-                        I also gained experience with handling issues through Universal robots support platform.
-                    </ul>
+                        <li>Assisted the Senior Project Engineer in developing a PLC program for the HMI system on a ship.</li>
+                        <li>Independently designed a SCADA system in ICONICS from scratch during the second half of the internship.</li>
+                        <li>The SCADA system provided the crew with critical sensor data such as: tank ballast level, engine status and more.</li>
+                        <li>Implemented a user management system that controlled data visibility based on user permissions.</li>
+                    </ul> 
                 </div>
             </div>
         </section>

@@ -50,11 +50,20 @@
 
 
 .side-nav a:hover,
-.side-nav a:hover span,
-.side-nav a.active,
-.side-nav a.active span {
+.side-nav a.active {
     color: #222;
+}
+
+.side-nav .nav-number,
+.side-nav .nav-text {
     transition: color 0.3s, transform 0.3s;
+}
+
+.side-nav a:hover .nav-number,
+.side-nav a:hover .nav-text,
+.side-nav a.active .nav-number,
+.side-nav a.active .nav-text {
+    color: #222;
     transform: scale(1.05);
 }
 
