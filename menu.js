@@ -1,4 +1,6 @@
-const sections = document.querySelectorAll("section[id]");
+const sections = document.querySelectorAll(
+    "#aboutme, section[id]"
+);
 const navLinks = document.querySelectorAll(".side-nav a");
 
 function updateActiveNav() {

@@ -1,0 +1,240 @@
+.about-wrapper {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+}
+
+
+
+.aboutme {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.aboutme h2 {
+    line-height: 1.45;
+    margin: 0;
+    font-size: clamp(1rem, 1.8vw, 1.25rem);
+    opacity: 0;
+    animation: emerge 0.5s forwards;
+    animation-delay: 1.5s;
+}
+
+.aboutme h1 {
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    line-height: 1.2;
+    margin: 0 0 0.75rem 0;
+    letter-spacing: normal;
+    opacity: 0;
+    animation: emerge 0.5s forwards;
+    animation-delay: 1s;
+}
+
+@keyframes emerge {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.education,
+.projects,
+.experience {
+    transform: translateX(100px);
+    opacity: 0;
+    transition: 0.5s ease-out;
+    z-index: 1;
+}
+
+.education.show,
+.projects.show,
+.experience.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.education .icon {
+    height: 10vh;
+    aspect-ratio: 1;
+    padding-left: 2%;
+}
+
+.school {
+    padding: 2%;
+    margin: 10px;
+}
+
+
+.projects {
+    transform: translateX(100px);
+    opacity: 0;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+
+.project {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.project h2 {
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+
+    border-bottom: 1px solid #d0d0d0;
+
+    font-size: 1.45em;
+    font-weight: 650;
+    line-height: 1.25;
+}
+
+.challenge {
+    font-size: 1em;
+
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.skills-gained {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    padding-top: 15px;
+    margin: 0;
+}
+
+.skills-gained span {
+    padding: 5px 9px;
+    border: 1px solid #ccc;
+}
+
+.github-link {
+    margin-top: 2vh;
+    display:inline-flex;
+    align-items: center;
+    margin-bottom: 1vh;
+    width: fit-content;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.github-link a {
+    text-decoration: none;
+    color: #00254d;
+    padding: 10px;
+}
+
+.github-link:hover {
+    color: #004c9d;
+    transform: scale(1.1);
+}
+
+.clickEncouragement {
+    text-align: center;
+    color: #20202080; /* Use a color that stands out */
+    font-style: italic;
+    font-size: 1em;
+}
+
+.experiences {
+    margin-top: 5%;
+} 
+
+.icon {
+    height: 2em;
+    aspect-ratio: 1;
+    padding-right: 2%;
+}
+
+.skills li {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1vh;
+}
+
+.experience {
+    transform: translateX(100px);
+    opacity: 0;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+
+.experience.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+
+.companylink a {
+    display: inline-block;
+    text-decoration: none;
+    color: #00254d;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.companylink a:hover {
+    color: #004c9d;
+    transform: scale(1.05);
+}
+
+.contact-wrapper {
+    min-height: 100vh;
+    padding-top: 2vh;
+    display: flex;
+    align-items: center;
+}
+
+.contact-wrapper .contact {
+    
+    width: auto;
+    flex: 1;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+.contact.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.contact ul {
+    padding-left: 0;
+    margin-left: 0;
+    margin: 15px;
+}
+
+.contact li {
+    
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1vh;
+    width: fit-content;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.contact a {
+    text-decoration: none;
+    color: #00254d;
+    transition: color 0.3s, transform 0.3s;
+    white-space: nowrap;
+}
+
+.contact li:hover {
+    color: #004c9d;
+    transform: scale(1.05);
+}

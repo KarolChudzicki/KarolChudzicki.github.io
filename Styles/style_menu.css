@@ -10,6 +10,7 @@
     width: max-content;
 
     font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(14px, 1.2vw, 20px);
     z-index: 10;
 }
 
@@ -26,7 +27,7 @@
     text-decoration: none;
     color: #777;
 
-    font-size: 20px;
+    
 }
 
 .side-nav a:not(:last-child)::after {
@@ -44,7 +45,6 @@
     width: 22px;
 
     color: #aaa;
-    font-size: 20px;
     font-weight: 400;
 }
 

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="Styles/style_general.css">
+    <link rel="stylesheet" href="Styles/style_sections.css">
     <link rel="stylesheet" href="Styles/style_gallery.css">
     <link rel="stylesheet" href="Styles/style_menu.css">  
     <link rel="stylesheet" href="background.css">
@@ -23,12 +24,15 @@
     <div class="main">
         <!-- Introduction -->
         
-        <section class="aboutme" id="aboutme">
-            <div class="content">
-                <h1>I'm Karol Chudzicki, robotic and automation engineer.</h1>
-                <h2>I enjoy turning ideas into working engineering systems. I'm experienced in Universal Robot programming, python development, image processing and more.</h2>
-            </div>
-        </section>
+        <div class="about-wrapper" id="aboutme">
+            <section class="aboutme">
+                <div class="content">
+                    <h1>I'm Karol Chudzicki, robotic and automation engineer.</h1>
+                    <h2>I enjoy turning ideas into working engineering systems. I'm experienced in Universal Robot programming, python development, image processing and more.</h2>
+                </div>
+            </section>
+        </div>
+        
 
 
         <!-- Projects -->
@@ -53,23 +57,31 @@
                             <span>Control theory</span>
                             <span>PID</span>
                         </div> 
-                        <p class="clickEncouragement">Click on the picture for more details.</p>
+                        
                         <div class="github-link">
                             <img src="Images/github.svg" alt="" class="icon"> <a href="https://github.com/KarolChudzicki/Master-Thesis" target="_blank"><strong>Repository</strong></a>
                         </div>
                     </div>
-                    <div class="image-gallery"><img src="Images/master_thesis_robot.png" alt="LEDRender" id="main_image_cube"></div>
+                    <div class="image-gallery">
+                        <img src="Images/master_thesis_robot.png" alt="LEDRender" id="main_image_cube">
+                        <p class="clickEncouragement">Click on the picture for more details.</p>
+                    </div>
+                    
                 </div>
                 
                 <div class="project">
                     <div class="details">
                         <h2><strong>6-axis robotic arm</strong></h2>
-                        <p>This pproject was part of my bachelor thesis. I designed, constructed and programmed robotic arm with six degrees of freedom.</p>
-                        <ul>
-                            <li>C++, Arduino, Fusion 360, CNC Machining</li>
-                        </ul>
+                        <p>This project was part of my bachelor thesis. I designed, constructed and programmed robotic arm with six degrees of freedom.</p>
                         <p class="challenge"><strong>Engineering challenge:</strong> Designing a rigid robotic structure and backlash reduction. Developing the inverse kinematics was another key challenge.</p>
-                        <p class="clickEncouragement">Click on the picture for more details.</p>
+                        <div class="skills-gained">
+                            <span>C++</span>
+                            <span>Arduino</span>
+                            <span>Fusion 360</span>
+                            <span>CNC Machining</span>
+                        </div> 
+                        
+                        
                         <div class="github-link">
                             <img src="Images/github.svg" alt="" class="icon"> <a href="https://github.com/KarolChudzicki/bachelor_thesis" target="_blank"><strong>Repository</strong></a>
                         </div>
@@ -77,7 +89,10 @@
                         
                     </div>
                     
-                    <div class="image-gallery"><img src="Images/roboArm_transparent.png" alt="ArmRender" id="main_image_arm"></div>                    
+                    <div class="image-gallery">
+                        <img src="Images/roboArm_transparent.png" alt="ArmRender" id="main_image_arm">
+                        <p class="clickEncouragement">Click on the picture for more details.</p>
+                    </div>                    
                 </div>
 
                 <div class="project">
@@ -87,12 +102,19 @@
                             I have build a 3.5" FPV freestyle drone from components that I chose myself. This project involved hardware, soldiering and flight controller configuration. It also required designing some of the parts and printing them on a bambu lab 3D printer.
                         </p>
                         <p class="challenge"><strong>Engineering challenge:</strong> Eliminating vibrations during flight and improving video transmission range and stability.</p>
-                        <ul>
-                            <li>3D printing, Control theory, PID, Soldering, Small electronics</li>
-                        </ul>
+                        <div class="skills-gained">
+                            <span>3D printing</span>
+                            <span>Control theory</span>
+                            <span>PID</span>
+                            <span>Soldering</span>
+                            <span>Small electronics</span>
+                        </div>
+                        
+                    </div>
+                    <div class="image-gallery">
+                        <img src="Images/drone.png" alt="LEDRender" id="main_image_cube">
                         <p class="clickEncouragement">Click on the picture for more details.</p>
                     </div>
-                    <div class="image-gallery"><img src="Images/drone.png" alt="LEDRender" id="main_image_cube"></div>
                 </div>
 
                 <div class="project">
@@ -102,12 +124,18 @@
                             I have build a 8x8x8 cube with individually addressable LEDs. The project involved designing the structure and soldering over 2000 connections and developing software to generate animations.
                         </p>
                         <p class="challenge"><strong>Engineering challenge:</strong> Making good quality soldering joints to prevent breaking and snapping.</p>
-                        <ul>
-                            <li>C++, ESP32, ESP32, Addressable LEDs, Power distribution</li>
-                        </ul>
+                        <div class="skills-gained">
+                            <span>C++</span>
+                            <span>ESP32</span>
+                            <span>Addresable LEDs</span>
+                            <span>Soldering</span>
+                        </div>
+                        
+                    </div>
+                    <div class="image-gallery">
+                        <img src="Images/led_cube.PNG" alt="LEDRender" id="main_image_cube">
                         <p class="clickEncouragement">Click on the picture for more details.</p>
                     </div>
-                    <div class="image-gallery"><img src="Images/led_cube.PNG" alt="LEDRender" id="main_image_cube"></div>
                 </div>
 
                 <div class="project">
@@ -117,13 +145,17 @@
                             This is my first big project and mosted used for manufacturing parts for my later ideas.
                         </p>
                         <p class="challenge"><strong>Engineering challenge:</strong> Learning CNC machining from scratch and designing a machine accurate enough to manufacture parts for future projects.</p>
-                        <ul>
-                            <li>Fusion 360, CNC path planning, CNC Machinning</li>
-                        </ul>
-                        <p class="clickEncouragement">Click on the picture for more details.</p>
+                        <div class="skills-gained">
+                            <span>Fusion 360</span>
+                            <span>CNC path planning</span>
+                        </div>
+                        
                         
                     </div>
-                    <div class="image-gallery"><img src="Images/cnc_transparent.png" alt="CNCRender" id="main_image_cnc"></div>
+                    <div class="image-gallery">
+                        <img src="Images/cnc_transparent.png" alt="CNCRender" id="main_image_cnc">
+                        <p class="clickEncouragement">Click on the picture for more details.</p>
+                    </div>
                 </div>
             </div>
         </section>
