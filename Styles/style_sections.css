@@ -62,15 +62,11 @@
 }
 
 .education .icon {
-    height: 10vh;
+    height: 15vh;
     aspect-ratio: 1;
     padding-left: 2%;
 }
 
-.school {
-    padding: 2%;
-    margin: 10px;
-}
 
 
 .projects {
