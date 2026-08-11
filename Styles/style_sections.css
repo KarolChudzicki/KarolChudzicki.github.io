@@ -32,6 +32,8 @@
     opacity: 0;
     animation: emerge 0.5s forwards;
     animation-delay: 1s;
+    border-bottom: none;
+    background-color: transparent;
 }
 
 @keyframes emerge {
@@ -151,13 +153,6 @@
     height: 2em;
     aspect-ratio: 1;
     padding-right: 2%;
-}
-
-.skills li {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    margin-bottom: 1vh;
 }
 
 .experience {
