@@ -1,3 +1,10 @@
+/* ================= ABOUT ME ================= */
+
+.about-wrapper h1 {
+    color: black;
+}
+
+
 .about-wrapper {
     min-height: 100vh;
 
@@ -69,7 +76,7 @@
     padding-left: 2%;
 }
 
-
+/* ================= PROJECTS ================= */
 
 .projects {
     transform: translateX(100px);
@@ -81,6 +88,7 @@
 
 .project {
     display: none;
+    align-items: center;
 }
 
 .project.active {
@@ -91,12 +99,12 @@
 @keyframes projectFadeIn {
     from {
         opacity: 0;
-        transform: scale(0.98);
+        /* transform: scale(0.98); */
     }
 
     to {
         opacity: 1;
-        transform: scale(1);
+        /* transform: scale(1); */
     }
 }
 
@@ -109,53 +117,6 @@
     font-size: 1.45em;
     font-weight: 650;
     line-height: 1.25;
-}
-
-/* ================= PROJECT TABS ================= */
-
-.project-tabs {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    width: 100%;
-
-    margin-top: 20px;
-    margin-bottom: 35px;
-
-    border-bottom: 1px solid #c7c7c7;
-}
-
-.project-tab {
-    appearance: none;
-    border: none;
-    background: transparent;
-
-    padding: 10px 8px;
-
-    font-family: inherit;
-    font-size: 0.95rem;
-    font-weight: 500;
-    color: #777;
-    text-align: center;
-
-    cursor: pointer;
-
-    border-bottom: 3px solid transparent;
-    margin-bottom: -1px;
-
-    text-shadow: 0 0 0 transparent;
-
-    transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-.project-tab:hover {
-    color: #0f4c81;
-    text-shadow: 0 0 0.6px #0f4c81;
-}
-
-.project-tab.active {
-    color: #0f4c81;
-    font-weight: 600;
-    border-bottom-color: #0f4c81;
 }
 
 .challenge {
@@ -216,13 +177,16 @@
     padding-right: 2%;
 }
 
+/* ================= EXPERIENCE ================= */
+
 .experience {
-    transform: translateX(100px);
+    transform: translateX(6rem);
     opacity: 0;
-    transition: 0.5s;
+    transition:
+        transform 0.5s ease-out,
+        opacity 0.5s ease-out;
     z-index: 1;
 }
-
 
 .experience.show {
     transform: translateX(0);
@@ -230,11 +194,55 @@
 }
 
 
+.experiences {
+    display: none;
+}
+
+.job-title {
+    width: fit-content;
+    margin: 0 0 0.6rem 0;
+    padding: 0;
+}
+
+.job-title h2 {
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+
+    border-bottom: 0.1rem solid #d7dde0;
+
+}
+
+.job-date {
+    font-weight: 400;
+    color: #666;
+}
+
+.experiences.active {
+    display: block;
+    animation: experienceFadeIn 0.7s ease forwards;
+}
+
+
+@keyframes experienceFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
 .companylink a {
     display: inline-block;
     text-decoration: none;
     color: #00254d;
-    transition: color 0.3s, transform 0.3s;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
 }
 
 .companylink a:hover {
@@ -243,16 +251,28 @@
 }
 
 
+/* ================= EDUCATIONS ================= */
+.education-wrapper .section-title {
+    margin-bottom: 2vh;
+}
+
+.school + .school {
+    margin-top: clamp(2rem, 4vw, 3.5rem);
+    padding-top: clamp(2rem, 4vw, 3.5rem);
+
+    border-top: 0.08rem solid #c7c7c7;
+}
+
+
+/* ================= CONTACT ================= */
 
 
 .contact-wrapper .section-title {
     display: flex;
     align-items: center;
-    gap: 16px;
 
     background: none;
 
-    padding: 12px 20px;
 }
 
 .contact-wrapper .section-title h1 {
@@ -306,4 +326,78 @@
 .contact li:hover {
     color: #004c9d;
     transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+/* ================= TABS ================= */
+
+.project-tabs,
+.experience-tabs {
+    display: grid;
+    width: 100%;
+
+    margin-top: 1.25rem;
+    margin-bottom: 2.2rem;
+
+    border-bottom: 0.0625rem solid #c7c7c7;
+}
+
+/* Number of tabs */
+.project-tabs {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.experience-tabs {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+.project-tab,
+.experience-tab {
+    appearance: none;
+    border: none;
+    background: transparent;
+
+    padding: 0.65rem 0.5rem;
+
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #777;
+    text-align: center;
+
+    cursor: pointer;
+
+    border-bottom: 0.18rem solid transparent;
+    margin-bottom: -0.0625rem;
+
+    text-shadow: 0 0 0 transparent;
+
+    transition:
+        color 0.3s ease,
+        text-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.project-tab:hover,
+.experience-tab:hover {
+    color: #0f4c81;
+    text-shadow: 0 0 0.04rem #0f4c81;
+}
+
+
+.project-tab.active,
+.experience-tab.active {
+    color: #0f4c81;
+    font-weight: 600;
+    border-bottom-color: #0f4c81;
 }

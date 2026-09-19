@@ -39,13 +39,11 @@ body {
 .section-title {
     display: flex;
     align-items: center;
-    gap: 16px;
 
-    background: #0f4c81;
-    color: #127815;
+    background: #315f7d;
     
 
-    padding: 12px 20px;
+    padding: 0.5rem 0.5rem;
 }
 
 
@@ -88,7 +86,7 @@ section {
 
         margin-left: 18%;
         margin-right: 5%;
-        margin-bottom: 10%;
+        margin-bottom: 5%;
 
         padding: 5%;
     }
@@ -98,7 +96,7 @@ section {
 /* Phones / small tablets */
 @media (max-width: 1000px) {
     .project {
-        flex-direction: column;
+        flex-direction: row;
     }
 
     .side-nav {
@@ -114,6 +112,7 @@ section {
 
         padding: 7%;
     }
+
 }
 
 .content,
