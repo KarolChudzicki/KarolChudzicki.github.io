@@ -80,10 +80,24 @@
 
 
 .project {
+    display: none;
+}
+
+.project.active {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
+    animation: projectFadeIn 0.7s ease forwards;
+}
+
+@keyframes projectFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .project h2 {
@@ -95,6 +109,53 @@
     font-size: 1.45em;
     font-weight: 650;
     line-height: 1.25;
+}
+
+/* ================= PROJECT TABS ================= */
+
+.project-tabs {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 100%;
+
+    margin-top: 20px;
+    margin-bottom: 35px;
+
+    border-bottom: 1px solid #c7c7c7;
+}
+
+.project-tab {
+    appearance: none;
+    border: none;
+    background: transparent;
+
+    padding: 10px 8px;
+
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #777;
+    text-align: center;
+
+    cursor: pointer;
+
+    border-bottom: 3px solid transparent;
+    margin-bottom: -1px;
+
+    text-shadow: 0 0 0 transparent;
+
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.project-tab:hover {
+    color: #0f4c81;
+    text-shadow: 0 0 0.6px #0f4c81;
+}
+
+.project-tab.active {
+    color: #0f4c81;
+    font-weight: 600;
+    border-bottom-color: #0f4c81;
 }
 
 .challenge {
@@ -179,6 +240,23 @@
 .companylink a:hover {
     color: #004c9d;
     transform: scale(1.05);
+}
+
+
+
+
+.contact-wrapper .section-title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    background: none;
+
+    padding: 12px 20px;
+}
+
+.contact-wrapper .section-title h1 {
+    color: black;
 }
 
 .contact-wrapper {

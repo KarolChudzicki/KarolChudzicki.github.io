@@ -156,3 +156,48 @@ if (next_button) {
             galleryImages[galleryIndex][currentIndex];
     });
 }
+
+
+
+// ===========================
+// PROJECT TABS
+// ===========================
+
+const projectTabs = document.querySelectorAll(".project-tab");
+const projectItems = document.querySelectorAll(".project");
+
+projectTabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+
+        projectTabs.forEach(t => t.classList.remove("active"));
+        projectItems.forEach(project => project.classList.remove("active"));
+
+        tab.classList.add("active");
+
+        document
+            .getElementById(tab.dataset.project)
+            .classList.add("active");
+    });
+});
+
+
+// ===========================
+// EXPERIENCE TABS
+// ===========================
+
+const experienceTabs = document.querySelectorAll(".experience-tab");
+const experiences = document.querySelectorAll(".experiences");
+
+experienceTabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+
+        experienceTabs.forEach(t => t.classList.remove("active"));
+        experiences.forEach(experience => experience.classList.remove("active"));
+
+        tab.classList.add("active");
+
+        document
+            .getElementById(tab.dataset.experience)
+            .classList.add("active");
+    });
+});

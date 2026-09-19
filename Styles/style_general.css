@@ -36,6 +36,23 @@ body {
 
 /* ================= SECTIONS ================= */
 
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    background: #0f4c81;
+    color: #127815;
+    
+
+    padding: 12px 20px;
+}
+
+
+.section-title h1 {
+    margin: 0;
+}
+
 section {
     width: 100%;
     box-sizing: border-box;
@@ -119,12 +136,11 @@ section {
 
 h1 {
     font-size: clamp(1.85rem, 3vw, 3rem);
-    color: #333333;
+    color: #ffffff;
     margin: 0 0 1rem;
     line-height: 2;
     text-align: left;
     /* border-bottom: 4px solid #d0d0d0; */
-    background-color: #f0f0f0;
     padding-top: 1vh;  
 }
 
