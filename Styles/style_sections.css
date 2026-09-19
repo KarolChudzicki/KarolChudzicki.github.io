@@ -346,7 +346,6 @@
 
 .project-tabs,
 .experience-tabs {
-    display: grid;
     width: 100%;
 
     margin-top: 1.25rem;
@@ -355,12 +354,23 @@
     border-bottom: 0.0625rem solid #c7c7c7;
 }
 
-/* Number of tabs */
+
+/* Projects — automatically wraps whole tabs */
 .project-tabs {
-    grid-template-columns: repeat(5, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
+.project-tab {
+    flex: 1 0 auto;
+    white-space: nowrap;
+}
+
+
+/* Experience — always 3 equal tabs */
 .experience-tabs {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
 
@@ -371,7 +381,7 @@
     border: none;
     background: transparent;
 
-    padding: 0.65rem 0.5rem;
+    padding: 0.65rem clamp(0.75rem, 1.5vw, 1.5rem);
 
     font-family: inherit;
     font-size: 0.95rem;
