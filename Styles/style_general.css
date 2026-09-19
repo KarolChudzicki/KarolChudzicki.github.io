@@ -88,7 +88,7 @@ section {
         margin-right: 5%;
         margin-bottom: 5%;
 
-        padding: 5%;
+        padding: 4%;
     }
 }
 
@@ -96,7 +96,7 @@ section {
 /* Phones / small tablets */
 @media (max-width: 1000px) {
     .project {
-        flex-direction: row;
+        flex-direction: column;
     }
 
     .side-nav {
