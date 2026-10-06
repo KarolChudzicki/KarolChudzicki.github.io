@@ -47,7 +47,7 @@ const galleryImages = {
         "Images/FlangeCoupling.png"
     ],
 
-    21: [
+    2: [
         "Images/cncgif.gif",
         "Images/cnc_pic.jpg"
     ],
