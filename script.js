@@ -36,6 +36,9 @@ const observer = new IntersectionObserver(
 
 const galleryImages = {
     0: [
+        "Images/masters.gif"
+    ],
+    1: [
         "Images/armgif.gif",
         "Images/roboArm_real.jpg",
         "Images/teachpendant.png",
@@ -44,16 +47,17 @@ const galleryImages = {
         "Images/FlangeCoupling.png"
     ],
 
-    1: [
+    21: [
         "Images/cncgif.gif",
         "Images/cnc_pic.jpg"
     ],
 
-    2: [
+    3: [
         "Images/cubegif.gif"
     ]
 };
 
+const main_image_masters = document.getElementById("main_image_masters");
 const main_image_arm = document.getElementById("main_image_arm");
 const main_image_cnc = document.getElementById("main_image_cnc");
 const main_image_cube = document.getElementById("main_image_cube");
@@ -83,22 +87,27 @@ function openGallery(index) {
     check_image_index();
 }
 
+if (main_image_masters) {
+    main_image_masters.addEventListener("click", () => {
+        openGallery(0);
+    });
+}
 
 if (main_image_arm) {
     main_image_arm.addEventListener("click", () => {
-        openGallery(0);
+        openGallery(1);
     });
 }
 
 if (main_image_cnc) {
     main_image_cnc.addEventListener("click", () => {
-        openGallery(1);
+        openGallery(2);
     });
 }
 
 if (main_image_cube) {
     main_image_cube.addEventListener("click", () => {
-        openGallery(2);
+        openGallery(3);
     });
 }
 
