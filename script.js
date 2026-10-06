@@ -79,12 +79,15 @@ function openGallery(index) {
     galleryIndex = index;
     currentIndex = 0;
 
-    gallery_image.src = galleryImages[galleryIndex][currentIndex];
+    const newImage = galleryImages[galleryIndex][currentIndex];
+
+    gallery_image.src = "";
+    gallery_image.src = newImage;
+
+    check_image_index();
 
     gallery.style.display = "flex";
     html.style.overflowY = "hidden";
-
-    check_image_index();
 }
 
 if (main_image_masters) {
@@ -118,6 +121,8 @@ if (close_button) {
     close_button.addEventListener("click", () => {
         gallery.style.display = "none";
         html.style.overflowY = "auto";
+
+        gallery_image.src = "";
         currentIndex = 0;
     });
 }
