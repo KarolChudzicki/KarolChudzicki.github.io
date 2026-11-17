@@ -141,6 +141,10 @@
     border: 1px solid #ccc;
 }
 
+.second_image_scara {
+    size: 50%;
+}
+
 .github-link {
     margin-top: 2vh;
     display:inline-flex;
