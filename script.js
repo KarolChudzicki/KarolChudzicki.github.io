@@ -37,10 +37,10 @@ const observer = new IntersectionObserver(
 
 const galleryImages = {
     0: [
-        { src: "Videos/MasterThesis_web.mp4", speed: 3.0 },
+        { src: "Videos/MasterThesis_web_optimized.mp4", speed: 3.0 },
     ],
     1: [
-        { src: "Videos/6AxisArm_web.mp4", speed: 2.0 },
+        { src: "Videos/6AxisArm_web_optimized.mp4", speed: 2.0 },
         "Images/roboArm_real.jpg",
         "Images/teachpendant.png",
         "Images/robo_arm.jpg",
@@ -48,15 +48,15 @@ const galleryImages = {
         "Images/FlangeCoupling.png"
     ],
     2: [
-        { src: "Videos/CNC_web.mp4", speed: 1.0 },
+        { src: "Videos/CNC_web_optimized.mp4", speed: 1.0 },
         "Images/cnc_pic.jpg"
     ],
     3: [
-        { src: "Videos/LedCube_web.mp4", speed: 1.0 },
+        { src: "Videos/LedCube_web_optimized.mp4", speed: 1.0 },
     ],
 
     4: [
-        { src: "Videos/Drone_web.mp4", speed: 1.0 },
+        { src: "Videos/Drone_web_optimized.mp4", speed: 1.0 },
     ]
 };
 
