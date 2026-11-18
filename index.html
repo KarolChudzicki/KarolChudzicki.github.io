@@ -112,6 +112,7 @@
                             <span>Python</span>
                             <span>OpenCV</span>
                             <span>TCP/IP</span>
+                            <span>Modbus</span>
                             <span>Universal Robots</span>
                             <span>3D printing</span>
                             <span>Control theory</span>
@@ -274,9 +275,9 @@
                         <img src="Images/drone.png"
                             alt="FPV quadcopter"
                             id="main_image_drone">
-                        <!-- <p class="clickEncouragement">
+                        <p class="clickEncouragement">
                             Click on the picture for more details.
-                        </p> -->
+                        </p>
                     </div>
 
                 </div>
@@ -565,14 +566,31 @@
         </div>
         
 
+        
         <div class="gallery" id="gallery">
             <span class="close">&times;</span>
+
             <div class="gallery_images">
                 <span class="prev_button">&#10094;</span>
-                <img src="" alt="ImageGallery" id="gallery_image">
+
+                <img
+                    id="gallery_image"
+                    alt="Gallery image"
+                >
+
+                <video
+                    id="gallery_video"
+                    autoplay
+                    loop
+                    muted
+                    playsinline
+                    preload="metadata">
+                </video>
+
                 <span class="next_button">&#10095;</span>
             </div>
         </div>
+
 
 
         <!-- Contact -->
